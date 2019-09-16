@@ -1,7 +1,11 @@
 node {
+ stage ('SCM Checkout'){
+  git 'https://github.com/narendrakoganti7/jenkins_pipelines.git'
   
-  stage {
-    
-  }
+ }
+ stage ('compile-package') {
+  sh mvn package
+ }
+
 
 }
