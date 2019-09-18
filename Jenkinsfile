@@ -4,6 +4,8 @@ node {
   
  }
  stage ('compile-package') {
+  tool name: 'maven-3.6.2', type: 'maven'
+  
   sh mvn package
  }
 
